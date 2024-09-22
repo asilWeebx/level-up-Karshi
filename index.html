@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Level Up web-site</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="Level Up Web-site" name="keywords">
+    <meta content="Level Up Web-site" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -707,7 +707,7 @@ console.log('Course qiymati:', document.getElementById('phon1').value);
         return;
     }
 
-    fetch('http://127.0.0.1:8000/api/send_form/', {
+    fetch('https://levelupstudye.pythonanywhere.com/api/send_form', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
