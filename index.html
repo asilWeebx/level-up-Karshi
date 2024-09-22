@@ -67,7 +67,7 @@
 
 
     <!-- Navbar Start -->
-    <div class="container-fluid">
+    <div class="container-fluid bg-white sticky-top">
         <div class="row border-top px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a class="d-flex align-items-center justify-content-between bg-secondary w-100 text-decoration-none"
@@ -215,7 +215,187 @@
     </div>
     <!-- About End -->
 
+<style>
+  .quotes {
+    width: 80vw;
+    min-height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  
+  .quotes .box {
+    position: relative;
+    width: 25vw;
+    height: 50vh;
+    min-height: 680px;
+    background: #f2f2f2;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.3);
+  }
+  
+  .quotes .box::before {
+    content: '\201C';
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    font-size: 120px;
+    opacity: 0.2;
 
+    pointer-events: none;
+  }
+  
+  .quotes .box::after {
+    content: '\201D';
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    font-size: 120px;
+    opacity: 0.2;
+    background: transparent;
+    filter: invert(1);
+    pointer-events: none;
+  }
+  
+  .quotes .box p {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .quotes .box h2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 10%;
+    right: 10%;
+    font-size: 1.5rem;
+  }
+  
+  .quotes .box:hover {
+    color: black;
+    box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5);
+  }
+  
+  .quotes .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    pointer-events: none;
+    width: 100%;
+    height: 200%;
+    overflow: hidden;
+  }
+  
+  .quotes .box.box1:hover,
+  .quotes .box.box1:hover~.bg {
+ 
+    background: #e2a9e5;
+  background: -moz-linear-gradient(-45deg, #fac000 15%, #fac000 100%);
+  background: -webkit-linear-gradient(-45deg, #fac000 15%,#fac000 100%);
+  background: linear-gradient(135deg, #fac000 15%,#fac000 100%);
+ 
+  }
+  
+  .quotes .box.box2:hover,
+  .quotes .box.box2:hover~.bg {
+
+    background: #632c65;
+  background: -moz-linear-gradient(-45deg, #fac000 15%, #fac000 100%);
+  background: -webkit-linear-gradient(-45deg, #fbff01 15%,#fac000 100%);
+  background: linear-gradient(135deg, #fac000 15%,#fac000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#632c65', endColorstr='#56a5e2',GradientType=1 );
+  }
+  
+  .quotes .box.box3:hover,
+  .quotes .box.box3:hover~.bg {
+   
+    background: #4b384c;
+  background: -moz-linear-gradient(-45deg, #fac000 15%, #fac000 100%);
+  background: -webkit-linear-gradient(-45deg, #fac000 15%,#fac000 100%);
+  background: linear-gradient(135deg, #fac000 15%,#fac000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b384c', endColorstr='#da5de2',GradientType=1 );
+  }
+  @media screen and (max-width: 768px) {
+  .quotes {
+    width: 100vw;
+    min-height: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .quotes .box {
+    width: 100vw;
+    height: auto;
+    min-height: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: -5px 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .quotes .box::before,
+  .quotes .box::after {
+    font-size: 80px;
+  }
+
+  .quotes .box p {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  .quotes .box h2 {
+    font-size: 1.2rem;
+    bottom: 5%;
+    right: 5%;
+  }
+
+  .quotes .bg {
+    height: 150%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .quotes {
+    width: 105vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .quotes .box {
+    width: 45vw;
+    height: auto;
+    min-height: 250px;
+    padding: 20px;
+  }
+
+  .quotes .box::before,
+  .quotes .box::after {
+    font-size: 100px;
+  }
+
+  .quotes .box p {
+    font-size: 1.1rem;
+  }
+
+  .quotes .box h2 {
+    font-size: 1.3rem;
+  }
+
+  .quotes .bg {
+    height: 175%;
+  }
+}
+
+  </style>
     <!-- Category Start -->
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
@@ -223,77 +403,48 @@
                
                 <h1>Kurslar</h1>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">
-                            <h4 class="text-white font-weight-medium">Starter/Beginner</h4> </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">
-                            <h4 class="text-white font-weight-medium">Elementary</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">
-                            <h4 class="text-white font-weight-medium">Pre-Intermediate</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-4.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">
-                            <h4 class="text-white font-weight-medium">Intermediate</h4>
-                         
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-5.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">
-                            <h4 class="text-white font-weight-medium">Pre-IELTS</h4>
-                     
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-6.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">
-                            <h4 class="text-white font-weight-medium">IELTS-STANDARD</h4>
+         
+
+                <div style="margin-left: -2rem;" class="quotes">
+                    <div class="card">
+                      <div class="box box1">
+                   <h3 style="margin-left: 1.5rem;">GENERAL ENGLISH</h3> <p> Kurs 4 darajani (Beginnerdan Intermediategacha) qamrab oladi, har biri 3-4 oy davom etadi.
+
+                            Darslar haftasiga 3 marta 90 daqiqa davomida, Camridge University Press'ning FACE2FACE dasturidan foydalanib o'tkaziladi.
                           
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-7.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">
-                            <h4 class="text-white font-weight-medium">IELTS-INTENSIVE</h4>
+                            Talabalarga bepul tarqatma materiallar beriladi
                           
-                        </a>
+                            Yakshanba kunlari tadbirlar o'tkaziladi, jumladan, Movie Day, Speaking Club, Debatlar va muvaffaqiyatli mehmonlar bilan seminarlar.
+                           O'tkazib yuborilgan darslar yoki qiyinchiliklar uchun yordamchi o'qituvchi yordam beradi </p>
+                      </div>
+                      <div class="bg"></div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-8.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">
-                            <h4 class="text-white font-weight-medium">CEFR</h4>
-                        
-                        </a>
+                    <div class="card">
+                      <div class="box box2">
+                       <h3 style="margin-left: 1.5rem;">IELTS</h3><p>IELTS formati haqida asosiy bilimlarni oling.
+
+                            IELTS testini samarali topshirish uchun strategiyalarni o'rganing.
+                          
+                            Haqiqiy IELTS imtihonini simulyatsiya qilish uchun sinov testlarida ishtirok eting.
+                          
+                            Har bir dars 90 daqiqa davom etadi, bu esa optimal o'quv mashg'ulotlari uchun mo'ljallangan.
+                          
+                            
+                          
+                            Har yakshanba kuni speaking klublari va boshqa qiziqarli, interaktiv tadbirlarda ishtirok eting</p>                     
+                      </div>
+                      <div class="bg"></div>
                     </div>
-                </div>
+                    <div class="card">
+                      <div class="box box3">
+                        <h3 style="margin-left: 1.5rem;">INTENSIVE</h3><p>INTENSIVE darslar formati: <br>Har kunlik darslar. <br>Individual yondashuv
+                            Bepul tarqatma materiallar. <br>O'z vaqtida berib boriladigan Feedback lar <br>Bepul CO-WORKING zone <br>Bepul Mock test 
+                            <br>Bepul tadbir va traininglar <br>2 ta o'qituvchi bilan shug'ullanish
+                        </p>   
+                      </div>
+                      <div class="bg"></div>
+                    </div>
+                
             </div>
         </div>
     </div>
@@ -310,13 +461,13 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-1.jpg" alt="">
+                        <img class="img-fluid" src="img/1.png" alt="">
                         <div class="bg-secondary p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
                             </div>
-                            <a class="h5" href="">Starter/Beginner</a>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">Starter/Beginner</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>3-oy
@@ -329,13 +480,13 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-2.jpg" alt="">
+                        <img class="img-fluid" src="img/2.png" alt="">
                         <div class="bg-secondary p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
                             </div>
-                            <a class="h5" href="">Elementary</a>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">Elementary</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4-oy
@@ -348,13 +499,13 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-3.jpg" alt="">
+                        <img class="img-fluid" src="img/3.png" alt="">
                         <div class="bg-secondary p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
                             </div>
-                            <a class="h5" href="">Pre-Intermediate</a>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">Pre-Intermediate</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4-oy
@@ -367,13 +518,13 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-4.jpg" alt="">
+                        <img class="img-fluid" src="img/4.png" alt="">
                         <div class="bg-secondary p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
                             </div>
-                            <a class="h5" href="">Intermediate</a>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">Intermediate</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4-oy
@@ -386,13 +537,13 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-4.jpg" alt="">
+                        <img class="img-fluid" src="img/5.png" alt="">
                         <div class="bg-secondary p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
                             </div>
-                            <a class="h5" href="">PRE-IELTS</a>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">PRE-IELTS</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>2-oy
@@ -405,13 +556,13 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-4.jpg" alt="">
+                        <img class="img-fluid" src="img/6.png" alt="">
                         <div class="bg-secondary p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
                             </div>
-                            <a class="h5" href="">IELTS-STANDARD</a>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">IELTS-STANDARD</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4-oy
@@ -424,13 +575,13 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-4.jpg" alt="">
+                        <img class="img-fluid" src="img/7.png" alt="">
                         <div class="bg-secondary p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>240-min</small>
                             </div>
-                            <a class="h5" href="">IELTS-INTENSIVE</a>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">IELTS-INTENSIVE</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>2-oy
@@ -443,13 +594,13 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-4.jpg" alt="">
+                        <img class="img-fluid" src="img/8.png" alt="">
                         <div class="bg-secondary p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
                             </div>
-                            <a class="h5" href="">CEFR</a>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">CEFR</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>3-oy
@@ -462,13 +613,13 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-4.jpg" alt="">
+                        <img class="img-fluid" src="img/9.png" alt="">
                         <div class="bg-secondary p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>2 O'quvchi</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
                             </div>
-                            <a class="h5" href="">INDIVIDUAL</a>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">INDIVIDUAL</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><small>Darajangizdan kelib chiqib</small>
@@ -509,22 +660,22 @@
                             <h1 class="m-0">Ro'yxatdan o'ting</h1>
                         </div>
                         <div class="card-body rounded-bottom bg-primary p-5">
-                            <form>
+                            <form id="contactForm">
                                 <div class="form-group">
-                                    <input type="text" class="form-control border-0 p-4" placeholder="Ismingiz"
+                                    <input type="text" id="name" name="name" class="form-control border-0 p-4" placeholder="Ismingiz"
                                         required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control border-0 p-4" placeholder="Familiyangiz"
+                                    <input type="text" id="surname" name="surname" class="form-control border-0 p-4" placeholder="Familiyangiz"
                                         required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control border-0 p-4" placeholder="Telefon raqamingiz"
+                                    <input type="text" id="phon1" name="phon1" class="form-control border-0 p-4" placeholder="Telefon raqamingiz"
                                         required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control border-0 p-4" placeholder="Qaysi kursga yozilmoqchisiz"
-                                        required="required" />
+                                    <input type="text" id="phone" name="phone" class="form-control border-0 p-4" placeholder="Qaysi kursga yozilmoqchisiz" required="required" />
+
                                 </div>
                                 <div>
                                     <button class="btn btn-dark btn-block border-0 py-3" type="submit">Kursga yozilish</button>
@@ -537,7 +688,52 @@
         </div>
     </div>
     <!-- Registration End -->
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
+    const data = {
+    name: document.getElementById('name').value,
+    surname: document.getElementById('surname').value,
+    phone: document.getElementById('phone').value,
+    phon1: document.getElementById('phon1').value // Bu joyda 'undefined' chiqmasligi kerak
+};
+console.log('Course qiymati:', document.getElementById('phon1').value);
+
+    console.log('Yuborilayotgan ma\'lumotlar:', data); // Yuborilayotgan ma'lumotlarni ko'rsatish
+
+    if (!data.name || !data.surname || !data.phone) {
+        alert("Iltimos, barcha maydonlarni to'ldiring.");
+        return;
+    }
+
+    fetch('http://127.0.0.1:8000/api/send_form/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Course qiymati:', document.getElementById('phon1').value);
+
+        // Muvaffaqiyatli javob qaytganda bildirishnomani ko'rsatish
+        showNotification();
+    })
+    .catch(error => {
+
+        console.error('Xato:', error);
+        alert('Malumotlar yetkazildi!');
+    });
+});
+
+      </script>
 
     <!-- Team Start -->
     <div id="teachers" class="container-fluid py-5">

@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import path
+from main.views import send_form
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/send_form/', send_form, name='send_form'),
 ]
