@@ -6,6 +6,7 @@
     <title>Level Up web-site</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Level Up Web-site" name="keywords">
+    <meta name="csrf-token" content="{% csrf_token %}"> <!-- CSRF tokenini qo'shish -->
     <meta content="Level Up Web-site" name="description">
 
     <!-- Favicon -->
@@ -82,10 +83,10 @@
                             <a href="#" class="nav-link" data-toggle="dropdown">General English<i
                                     class="fa fa-angle-down float-right mt-1"></i></a>
                             <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="#course" class="dropdown-item">Starter/Beginner</a>
-                                <a href="#course" class="dropdown-item">Elementary</a>
-                                <a href="#course" class="dropdown-item">Pre-Intermidiate</a>
-                                <a href="#course" class="dropdown-item">Intermidiate</a>
+                                <a href="#course0" class="dropdown-item">Starter/Beginner</a>
+                                <a href="#course0" class="dropdown-item">Elementary</a>
+                                <a href="#course0" class="dropdown-item">Pre-Intermidiate</a>
+                                <a href="#course0" class="dropdown-item">Intermidiate</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
@@ -454,7 +455,7 @@
     <!-- Courses Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
-            <div id="course" class="text-center mb-5">
+            <div id="course0" class="text-center mb-5">
                 <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Kurslar</h5>
                 <h1>Haqida</h1>
             </div>
@@ -660,7 +661,7 @@
                             <h1 class="m-0">Ro'yxatdan o'ting</h1>
                         </div>
                         <div class="card-body rounded-bottom bg-primary p-5">
-                            <form id="contactForm">
+                            <form id="course-form">
                                 <div class="form-group">
                                     <input type="text" id="name" name="name" class="form-control border-0 p-4" placeholder="Ismingiz"
                                         required="required" />
@@ -670,16 +671,17 @@
                                         required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" id="phon1" name="phon1" class="form-control border-0 p-4" placeholder="Telefon raqamingiz"
+                                    <input type="text" id="phone_number" name="phone_number" class="form-control border-0 p-4" placeholder="Telefon raqamingiz"
                                         required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" id="phone" name="phone" class="form-control border-0 p-4" placeholder="Qaysi kursga yozilmoqchisiz" required="required" />
+                                    <input type="text" id="course" name="course" class="form-control border-0 p-4" placeholder="Qaysi kursga yozilmoqchisiz" required="required" />
 
                                 </div>
                                 <div>
                                     <button class="btn btn-dark btn-block border-0 py-3" type="submit">Kursga yozilish</button>
                                 </div>
+                                <div style="text-align: center;color: white;margin-top: 1rem;" id="response-message"></div>
                             </form>
                         </div>
                     </div>
@@ -687,49 +689,43 @@
             </div>
         </div>
     </div>
+    
     <!-- Registration End -->
     <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+  // script.js
+document.getElementById('course-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Formani yuborishning oldini olish
 
-    const data = {
-    name: document.getElementById('name').value,
-    surname: document.getElementById('surname').value,
-    phone: document.getElementById('phone').value,
-    phon1: document.getElementById('phon1').value // Bu joyda 'undefined' chiqmasligi kerak
-};
-console.log('Course qiymati:', document.getElementById('phon1').value);
+    const formData = {
+        name: document.getElementById('name').value,
+        surname: document.getElementById('surname').value,
+        phone_number: document.getElementById('phone_number').value,
+        course: document.getElementById('course').value,
+    };
 
-    console.log('Yuborilayotgan ma\'lumotlar:', data); // Yuborilayotgan ma'lumotlarni ko'rsatish
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content'); // CSRF tokenini olish
 
-    if (!data.name || !data.surname || !data.phone) {
-        alert("Iltimos, barcha maydonlarni to'ldiring.");
-        return;
-    }
-
-    fetch('https://levelupstudye.pythonanywhere.com/api/send_form/', {
+    fetch('https://levelupbackend.pythonanywhere.com/courses/', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken, // CSRF tokenini qo'shish
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(formData)
     })
     .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok: ' + response.statusText);
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Xato: Ma\'lumotlar saqlanmadi.');
         }
-        return response.json();
     })
     .then(data => {
-        console.log('Course qiymati:', document.getElementById('phon1').value);
-
-        // Muvaffaqiyatli javob qaytganda bildirishnomani ko'rsatish
-        showNotification();
+        document.getElementById('response-message').innerText = 'Muvaffaqiyatli ro`yxatdan o`tdingiz siz bilan tez orada aloqaga chiqamiz!';
+        document.getElementById('course-form').reset(); // Formani tozalash
     })
     .catch(error => {
-
-        console.error('Xato:', error);
-        alert('Malumotlar yetkazildi!');
+        document.getElementById('response-message').innerText = error.message;
     });
 });
 
