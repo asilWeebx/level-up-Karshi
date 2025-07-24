@@ -11,6 +11,14 @@
 
     <!-- Favicon -->
     <link href="img/favicon.png" rel="icon">
+<!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -238,6 +246,7 @@
     box-sizing: border-box;
     padding: 30px;
     box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
   }
   
   .quotes .box::before {
@@ -741,116 +750,193 @@ document.getElementById('course-form').addEventListener('submit', function(event
                 <div class="col-md-6 col-lg-3 text-center team mb-4">
                     <div class="team-item rounded overflow-hidden mb-2">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                            <img class="img-fluid" src="img/muinisa-1.JPG" alt="">
-                        </div>
-                        <div class="bg-secondary p-4">
-                            <h5>Munisa Akhmadovna</h5>
-                            <p class="m-0">General English <br>(IELTS: 7.0)</p>
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/munisa.mp4" type="video/mp4">
+                              </video>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center team mb-4">
                     <div class="team-item rounded overflow-hidden mb-2">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                            <img class="img-fluid" src="img/parviz-1.JPG" alt="">
-                            
-                        </div>
-                        <div class="bg-secondary p-4">
-                            <h5>Parviz Khudoyberdiev</h5>
-                            <p class="m-0">General English <br>(CELTA cert. | IELTS 7.0)</p>
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/parviz.mp4" type="video/mp4">
+                              </video>
                         </div>
                     </div>
-                </div>
+                </div>    
                 <div class="col-md-6 col-lg-3 text-center team mb-4">
                     <div class="team-item rounded overflow-hidden mb-2">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                            <img class="img-fluid" src="img/shodiyona-1.JPG" alt="">
-                           
-                        </div>
-                        <div class="bg-secondary p-4">
-                            <h5>Shodiyona Yuldasheva</h5>
-                            <p class="m-0">IELTS INSTRUCTOR <br> (IELTS: 7.0)</p>
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/ozoda.mp4" type="video/mp4">
+                              </video>
                         </div>
                     </div>
-                </div>
+                </div>  
                 <div class="col-md-6 col-lg-3 text-center team mb-4">
                     <div class="team-item rounded overflow-hidden mb-2">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                            <img class="img-fluid" src="img/ozoda-1.JPG" alt="">
-                           
-                        </div>
-                        <div class="bg-secondary p-4">
-                            <h5>Ozoda <br> Saodatova</h5>
-                            <p class="m-0">Support <br> CEFR: C1</p>
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/murod.mp4" type="video/mp4">
+                              </video>
                         </div>
                     </div>
-                </div>
+                </div>  
                 <div class="col-md-6 col-lg-3 text-center team mb-4">
                     <div class="team-item rounded overflow-hidden mb-2">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                            <img class="img-fluid" src="img/azamat-1.JPG" alt="">
-                        </div>
-                        <div class="bg-secondary p-4">
-                            <h5>Azamat <br> Shonazarov </h5>
-                            <p class="m-0">Support <br> CEFR: C1</p>
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/azamat.mp4" type="video/mp4">
+                              </video>
                         </div>
                     </div>
-                </div>
+                </div>  
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/fotima.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/durdona.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>   
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/mirjalol.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>   
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/marjona.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>   
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/kamron.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>   
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/lola.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>   
             </div>
         </div>
     </div>
     <!-- Team End -->
-
-
-
-
-    <!-- Blog Start -->
-    <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <div class="text-center mb-5">
-                <h1>O'quvchilarimiz natijalari</h1>
-            </div>
-            <div class="row pb-3">
-                <div class="col-lg-4 mb-4">
-                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/result-1.PNG" alt="">
-                       
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/result-2.PNG" alt="">
-                       
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/result-3.PNG" alt="">
-                       
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/result-4.PNG" alt="">
-                       
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/result-5.PNG" alt="">
-                       
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/result-6.PNG" alt="">
-                       
-                    </div>
-                </div>
-            </div>
+  <!-- Blog Start -->
+  <div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-5">
+            <h1>O'quvchilarimiz natijalari</h1>
         </div>
+        <div class="carousel-container">
+            <button class="carousel-btn" id="prevBtn">&#10094;</button>
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide"><img src="results/new/new4.jpg" alt="Image 1"></div>
+              <div class="carousel-slide"><img src="results/0.png" alt="Image 1"></div>
+              <div class="carousel-slide"><img src="results/01.png" alt="Image 2"></div>
+              <div class="carousel-slide"><img src="results/02.png" alt="Image 3"></div>
+              <div class="carousel-slide"><img src="results/04.png" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/new2.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/new3.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/parviz.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/celta.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/charos.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/fotima.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/lola.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/farangiz.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/bilolbek.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/azamat.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/Image (2).jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/kamron.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/marjona.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/murodbek.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/shahrizoda.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/shodiyona.jpg" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/asilabonu.png" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/musabek.png" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/noila.png" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/1.png" alt="Image 5"></div>
+              <div class="carousel-slide"><img src="results/2.jpg" alt="Image 6"></div>
+              <div class="carousel-slide"><img src="results/3.png" alt="Image 7"></div>
+              <div class="carousel-slide"><img src="results/4.png" alt="Image 8"></div>
+              <div class="carousel-slide"><img src="results/5.png" alt="Image 9"></div>
+              <div class="carousel-slide"><img src="results/7.png" alt="Image 11"></div>
+              <div class="carousel-slide"><img src="results/8.png" alt="Image 12"></div>
+              <div class="carousel-slide"><img src="results/9.png" alt="Image 13"></div>
+              <div class="carousel-slide"><img src="results/10.png" alt="Image 14"></div>
+              <div class="carousel-slide"><img src="results/11.png" alt="Image 15"></div>
+              <div class="carousel-slide"><img src="results/12.png" alt="Image 16"></div>
+              <div class="carousel-slide"><img src="results/13.png" alt="Image 17"></div>
+
+            </div>
+            <button class="carousel-btn" id="nextBtn">&#10095;</button>
+          </div>
+          
     </div>
-    <!-- Blog End -->
+</div>
+<!-- Blog End -->
+  
+      <script>
+        const track = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+      
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const slideCount = slides.length;
+      
+        function updateCarousel() {
+          const slideWidth = slides[0].offsetWidth;
+          track.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+        }
+      
+        nextBtn.addEventListener('click', () => {
+          if (slideIndex < slideCount - 1) {
+            slideIndex++;
+            updateCarousel();
+          }
+        });
+      
+        prevBtn.addEventListener('click', () => {
+          if (slideIndex > 0) {
+            slideIndex--;
+            updateCarousel();
+          }
+        });
+      
+        window.addEventListener('resize', updateCarousel);
+        // Auto slide every 3 seconds
+  setInterval(nextImage, 3000);
+      </script>
+  
 
 
     <!-- Footer Start -->
