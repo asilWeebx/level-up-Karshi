@@ -255,6 +255,161 @@
         </div>
     </div>
     <!-- About End -->
+<section class="utp-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Level Up Karshi tanlashingiz uchun 8 sabab</h5>
+            <h2 class="display-4 font-weight-bold">Bizning Afzalliklarimiz</h2>
+        </div>
+        <div class="utp-container">
+            <div class="utp-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Student's App + Reward System</h3>
+                <p>Talabalar uchun mukofot tizimi va mobil ilova orqali nazorat.</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-users"></i>
+                <h3>15 kishilik guruhlar</h3>
+                <p>Har bir guruhda maximum 15 nafar o‘quvchi, individual yondashuv.</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-home"></i>
+                <h3>Bepul Co-working Zone</h3>
+                <p>O‘quvchilar uchun qulay muhitda bepul coworking maydon.</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-book-open"></i>
+                <h3>Buyuk Britaniya ta’lim tizimi</h3>
+                <p>Darslar zamonaviy Britaniya ta’lim modeli asosida.</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-bullseye"></i>
+                <h3>Amaliy darslar</h3>
+                <p>Har bir darsda real hayotiy vaziyatlarga asoslangan mashg‘ulotlar.</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-headset"></i>
+                <h3>Free Support Tizimi</h3>
+                <p>O‘quvchilar uchun bepul yordam tizimi (online/offline).</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-check-circle"></i>
+                <h3>Academic Department</h3>
+                <p>O‘quv sifatini doimiy nazorat qiluvchi bo‘lim.</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Weekend Events</h3>
+                <p>Har hafta dam olish kunlari o‘tkaziladigan interaktiv tadbirlar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <style>
+/* Global yaxshilanishlar uchun */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #444; /* Matn rangini biroz quyuqroq qilish */
+    background-color: #f7f7f7; /* Umumiy fon rangini oq emas, och kulrang qilish */
+}
+
+/* UTP Section (Bizning Afzalliklarimiz) - Zamonaviy Grid */
+.utp-section {
+    text-align: center;
+    padding: 80px 0;
+    background: white; /* Bu qism oq fonda yorqin turadi */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.utp-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+}
+.utp-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.utp-card {
+    background: #fdfdfd;
+    border-radius: 12px; /* Yumaloq burchaklar */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Yumshoq soya */
+    padding: 30px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Silliq animatsiya */
+    border-left: 5px solid #ffc107; /* Toza chiziqcha qo'shish */
+}
+.utp-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(255, 193, 7, 0.25); /* Yorqinroq soya */
+    background-color: #fff8e8; /* Hoverda och sariq fon */
+}
+.utp-card i {
+    font-size: 38px;
+    color: #ffc107; /* Asosiy rang */
+    margin-bottom: 15px;
+    background: #ffc10720; /* Icon orqasida och fon */
+    padding: 10px;
+    border-radius: 50%;
+}
+.utp-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+}
+.utp-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Testimonial Section (Yangi Fikrlar qismi) */
+.testimonial-section {
+    background-color: #f7f7f7;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+.testimonial-card::before {
+    content: '\201C'; /* Katta qo'shtirnoq */
+    position: absolute;
+    top: -15px;
+    left: 5px;
+    font-size: 80px;
+    color: #ffc10750; /* Asosiy rangning ochroq tusi */
+    line-height: 1;
+    z-index: 1;
+    opacity: 0.6;
+}
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+.quote-text {
+    font-style: italic;
+    color: #333;
+    font-size: 1.05rem;
+    z-index: 2;
+    position: relative;
+}
+</style>
+<!-- Font Awesome iconlar uchun -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <style>
   .quotes {
@@ -380,7 +535,7 @@
     width: 100vw;
     height: auto;
     min-height: 200px;
-    padding: 10px;
+    padding: 10px; 
     margin-bottom: 10px;
     box-shadow: -5px 15px 30px rgba(0, 0, 0, 0.2);
   }
@@ -801,16 +956,16 @@ document.getElementById('course-form').addEventListener('submit', function(event
                     <div class="team-item rounded overflow-hidden mb-2">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
                             <video class=" video-fluid" autoplay muted loop playsinline>
-                                <source src="video/ozoda.mp4" type="video/mp4">
+                                <source src="video/istam.mp4" type="video/mp4">
                               </video>
                         </div>
                     </div>
                 </div>  
-                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                  <div class="col-md-6 col-lg-3 text-center team mb-4">
                     <div class="team-item rounded overflow-hidden mb-2">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
                             <video class=" video-fluid" autoplay muted loop playsinline>
-                                <source src="video/murod.mp4" type="video/mp4">
+                                <source src="video/asadbek.mp4" type="video/mp4">
                               </video>
                         </div>
                     </div>
@@ -820,6 +975,15 @@ document.getElementById('course-form').addEventListener('submit', function(event
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
                             <video class=" video-fluid" autoplay muted loop playsinline>
                                 <source src="video/azamat.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>  
+                   <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/ziyodbek.mp4" type="video/mp4">
                               </video>
                         </div>
                     </div>
@@ -846,15 +1010,6 @@ document.getElementById('course-form').addEventListener('submit', function(event
                     <div class="team-item rounded overflow-hidden mb-2">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
                             <video class=" video-fluid" autoplay muted loop playsinline>
-                                <source src="video/mirjalol.mp4" type="video/mp4">
-                              </video>
-                        </div>
-                    </div>
-                </div>   
-                <div class="col-md-6 col-lg-3 text-center team mb-4">
-                    <div class="team-item rounded overflow-hidden mb-2">
-                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                            <video class=" video-fluid" autoplay muted loop playsinline>
                                 <source src="video/marjona.mp4" type="video/mp4">
                               </video>
                         </div>
@@ -864,7 +1019,7 @@ document.getElementById('course-form').addEventListener('submit', function(event
                     <div class="team-item rounded overflow-hidden mb-2">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
                             <video class=" video-fluid" autoplay muted loop playsinline>
-                                <source src="video/kamron.mp4" type="video/mp4">
+                                <source src="video/kamron-1.mp4" type="video/mp4">
                               </video>
                         </div>
                     </div>
@@ -877,7 +1032,25 @@ document.getElementById('course-form').addEventListener('submit', function(event
                               </video>
                         </div>
                     </div>
-                </div>   
+                </div> 
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/mohinur.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>  
+      <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/ahmad.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>  
             </div>
         </div>
     </div>
@@ -896,37 +1069,40 @@ document.getElementById('course-form').addEventListener('submit', function(event
               <div class="carousel-slide"><img src="results/01.png" alt="Image 2"></div>
               <div class="carousel-slide"><img src="results/02.png" alt="Image 3"></div>
               <div class="carousel-slide"><img src="results/04.png" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/new2.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/new3.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/parviz.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/celta.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/charos.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/fotima.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/lola.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/farangiz.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/bilolbek.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/azamat.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/Image (2).jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/kamron.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/marjona.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/murodbek.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/shahrizoda.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/new/shodiyona.jpg" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/asilabonu.png" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/musabek.png" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/noila.png" alt="Image 4"></div>
-              <div class="carousel-slide"><img src="results/1.png" alt="Image 5"></div>
-              <div class="carousel-slide"><img src="results/2.jpg" alt="Image 6"></div>
-              <div class="carousel-slide"><img src="results/3.png" alt="Image 7"></div>
-              <div class="carousel-slide"><img src="results/4.png" alt="Image 8"></div>
-              <div class="carousel-slide"><img src="results/5.png" alt="Image 9"></div>
-              <div class="carousel-slide"><img src="results/7.png" alt="Image 11"></div>
-              <div class="carousel-slide"><img src="results/8.png" alt="Image 12"></div>
-              <div class="carousel-slide"><img src="results/9.png" alt="Image 13"></div>
-              <div class="carousel-slide"><img src="results/10.png" alt="Image 14"></div>
-              <div class="carousel-slide"><img src="results/11.png" alt="Image 15"></div>
-              <div class="carousel-slide"><img src="results/12.png" alt="Image 16"></div>
-              <div class="carousel-slide"><img src="results/13.png" alt="Image 17"></div>
+              <div class="carousel-slide"><img src="results/new/new2.jpg" alt="Image 5"></div>
+              <div class="carousel-slide"><img src="results/new/new3.jpg" alt="Image 6"></div>
+              <div class="carousel-slide"><img src="results/new/parviz.jpg" alt="Image 7"></div>
+              <div class="carousel-slide"><img src="results/new/celta.jpg" alt="Image 9"></div>
+              <div class="carousel-slide"><img src="results/new/charos.jpg" alt="Image 9"></div>
+              <div class="carousel-slide"><img src="results/new/fotima.jpg" alt="Image 10"></div>
+              <div class="carousel-slide"><img src="results/new/lola.jpg" alt="Image 11"></div>
+              <div class="carousel-slide"><img src="results/new/farangiz.jpg" alt="Image 12"></div>
+              <div class="carousel-slide"><img src="results/new/bilolbek.jpg" alt="Image 13"></div>
+              <div class="carousel-slide"><img src="results/new/azamat.jpg" alt="Image 14"></div>
+              <div class="carousel-slide"><img src="results/new/Image (2).jpg" alt="Image 15"></div>
+              <div class="carousel-slide"><img src="results/new/ziyodbek.jpg" alt="Image 38"></div>
+              <div class="carousel-slide"><img src="results/new/kamron.jpg" alt="Image 16"></div>
+              <div class="carousel-slide"><img src="results/new/image.jpg" alt="Image 17"></div>
+              <div class="carousel-slide"><img src="results/new/marjona.jpg" alt="Image 18"></div>
+              <div class="carousel-slide"><img src="results/new/murodbek.jpg" alt="Image 19"></div>
+              <div class="carousel-slide"><img src="results/new/shahrizoda.jpg" alt="Image 20"></div>
+              <div class="carousel-slide"><img src="results/new/shodiyona.jpg" alt="Image 21"></div>
+              <div class="carousel-slide"><img src="results/asilabonu.png" alt="Image 22"></div>
+              <div class="carousel-slide"><img src="results/musabek.png" alt="Image 23"></div>
+              <div class="carousel-slide"><img src="results/noila.png" alt="Image 24"></div>
+              <div class="carousel-slide"><img src="results/1.png" alt="Image 26"></div>
+              <div class="carousel-slide"><img src="results/2.jpg" alt="Image 27"></div>
+              <div class="carousel-slide"><img src="results/3.png" alt="Image 28"></div>
+              <div class="carousel-slide"><img src="results/4.png" alt="Image 29"></div>
+              <div class="carousel-slide"><img src="results/5.png" alt="Image 30"></div>
+              <div class="carousel-slide"><img src="results/7.png" alt="Image 31"></div>
+              <div class="carousel-slide"><img src="results/8.png" alt="Image 32"></div>
+              <div class="carousel-slide"><img src="results/9.png" alt="Image 33"></div>
+              <div class="carousel-slide"><img src="results/10.png" alt="Image 34"></div>
+              <div class="carousel-slide"><img src="results/11.png" alt="Image 35"></div>
+              <div class="carousel-slide"><img src="results/12.png" alt="Image 36"></div>
+              <div class="carousel-slide"><img src="results/13.png" alt="Image 37"></div>
+              
 
             </div>
             <button class="carousel-btn" id="nextBtn">&#10095;</button>
