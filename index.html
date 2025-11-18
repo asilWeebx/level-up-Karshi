@@ -677,7 +677,7 @@ body {
                             <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">Elementary</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4-oy
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>3-oy
                                     </h6>
                                     <h5 class="m-0">450.000 UZS</h5>
                                 </div>
@@ -696,7 +696,7 @@ body {
                             <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">Pre-Intermediate</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4-oy
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>3-oy
                                     </h6>
                                     <h5 class="m-0">450.000 UZS</h5>
                                 </div>
@@ -823,59 +823,50 @@ body {
     </div>
     <!-- Courses End -->
 
-
+<style>
+  /* Responsive adjustment */
+  @media (max-width: 768px) {
+    .registration-wrapper {
+      min-height: auto; /* Kichik ekranlarda 100vh ni olib tashlaymiz */
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+</style>
     <!-- Registration Start -->
-    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-7 mb-5 mb-lg-0">
-                    <div class="mb-4">
-                        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;"> <span style="color: white;font-size: 2rem;">"3+1"</span> Chegirma</h5>
-                        
+  <div class="container-fluid registration-wrapper" style="min-height: 100vh; display: flex; justify-content: center; align-items: center; background:#fff;">
+    <div class="container" style="max-width: 600px;">
+        <div class="row justify-content-center">
+            <div id="apply" class="col-12">
+                <div class="card border-0 shadow">
+                    <div class="card-header bg-light text-center p-4">
+                        <h1 class="m-0">Ro'yxatdan o'ting</h1>
                     </div>
-                
-                    <ul class="list-inline text-white m-0">
-                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i><span style="font-size: 1.5rem;">3</span>-ta do'stingizni olib keling <span style="font-size: 1.5rem;">1-oylik</span> bepul kursni qo'lga kiriting.
-                        </li>
-                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i><span style="font-size: 1.5rem;">2</span>-ta do'stingizni olib keling <span style="font-size: 1.5rem;">60%</span> chegirma oling.</li>
-                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i><span style="font-size: 1.5rem;">1</span>-ta do'stingizni olib keling va <span style="font-size: 1.5rem;">30%</span>-lik chegirma yutib oling.
-                        </li>
-                    </ul>
-                </div>
-                <div id="apply" class="col-lg-5">
-                    <div class="card border-0">
-                        <div class="card-header bg-light text-center p-4">
-                            <h1 class="m-0">Ro'yxatdan o'ting</h1>
-                        </div>
-                        <div class="card-body rounded-bottom bg-primary p-5">
-                            <form id="course-form">
-                                <div class="form-group">
-                                    <input type="text" id="name" name="name" class="form-control border-0 p-4" placeholder="Ismingiz"
-                                        required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="surname" name="surname" class="form-control border-0 p-4" placeholder="Familiyangiz"
-                                        required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="phone_number" name="phone_number" class="form-control border-0 p-4" placeholder="Telefon raqamingiz"
-                                        required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="course" name="course" class="form-control border-0 p-4" placeholder="Qaysi kursga yozilmoqchisiz" required="required" />
-
-                                </div>
-                                <div>
-                                    <button class="btn btn-dark btn-block border-0 py-3" type="submit">Kursga yozilish</button>
-                                </div>
-                                <div style="text-align: center;color: white;margin-top: 1rem;" id="response-message"></div>
-                            </form>
-                        </div>
+                    <div class="card-body rounded-bottom bg-primary p-5">
+                        <form id="course-form">
+                            <div class="form-group mb-3">
+                                <input type="text" id="name" name="name" class="form-control border-0 p-4" placeholder="Ismingiz" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" id="surname" name="surname" class="form-control border-0 p-4" placeholder="Familiyangiz" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" id="phone_number" name="phone_number" class="form-control border-0 p-4" placeholder="Telefon raqamingiz" required />
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="text" id="course" name="course" class="form-control border-0 p-4" placeholder="Qaysi kursga yozilmoqchisiz" required />
+                            </div>
+                            <div>
+                                <button class="btn btn-dark btn-block border-0 py-3 w-100" type="submit">Kursga yozilish</button>
+                            </div>
+                            <div style="text-align: center; color: white; margin-top: 1rem;" id="response-message"></div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
     
     <!-- Registration End -->
     <script>
@@ -1093,6 +1084,9 @@ document.getElementById('course-form').addEventListener('submit', function(event
               <div class="carousel-slide"><img src="results/11.png" alt="Image 35"></div>
               <div class="carousel-slide"><img src="results/12.png" alt="Image 36"></div>
               <div class="carousel-slide"><img src="results/13.png" alt="Image 37"></div>
+              <div class="carousel-slide"><img src="results/new/madina.jpg" alt="Image 38"></div>
+              <div class="carousel-slide"><img src="results/new/zaxro.jpg" alt="Image 39"></div>
+              <div class="carousel-slide"><img src="results/new/dildora.jpg" alt="Image 40"></div>
               
 
             </div>
