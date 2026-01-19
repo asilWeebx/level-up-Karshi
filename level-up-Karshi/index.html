@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Level Up - Ingliz tili o'quv markazi.</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Level Up" name="keywords">
+    <meta name="csrf-token" content="{% csrf_token %}"> <!-- CSRF tokenini qo'shish -->
+    <meta content="Level Up - Ingliz tili o'quv markazi." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.png" rel="icon">
+<!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center py-4 px-xl-5">
+            <div class="col-lg-3">
+                <a href="" class="text-decoration-none">
+                    <img style="width: 17rem;" src="img/IMG_1714.PNG" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Bizning manzil</h6>
+                        <small><a href="https://maps.app.goo.gl/YPeUn7f7BgDHczaz8">Qarshi shahar Eski Gilam bozori</a></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fab fa-2x fa-telegram text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Telegram</h6>
+                        <small><a href="https://t.me/level_upadmin">t.me/level_upadmin</a></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Bog'lanish</h6>
+                        <small>+998 99 774 57 22</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white sticky-top">
+        <div class="row border-top px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a class="d-flex align-items-center justify-content-between bg-secondary w-100 text-decoration-none"
+                    data-toggle="collapse" href="#navbar-vertical" style="height: 67px; padding: 0 30px;">
+                    <h5 class="text-primary m-0"><i class="fa fa-book-open mr-2"></i>Kurslar</h5>
+                    <i class="fa fa-angle-down text-primary"></i>
+                </a>
+                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light"
+                    id="navbar-vertical" style="width: calc(100% - 30px); z-index: 9;">
+                    <div class="navbar-nav w-100">
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">General English<i
+                                    class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="#course0" class="dropdown-item">Starter/Beginner</a>
+                                <a href="#course0" class="dropdown-item">Elementary</a>
+                                <a href="#course0" class="dropdown-item">Pre-Intermidiate</a>
+                                <a href="#course0" class="dropdown-item">Intermidiate</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">IELTS<i
+                                    class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="#course1" class="dropdown-item">PRE-IELTS</a>
+                                <a href="#course1" class="dropdown-item">IELTS INTENSIVE</a>
+                                <a href="#course1" class="dropdown-item">IELTS STANDARD</a>
+                    
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">CEFR<i
+                                    class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="#course2" class="dropdown-item">CEFR INTENSIVE</a>
+                                <a href="#course2" class="dropdown-item">CEFR STANDARD</a>
+                    
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">MINI GROUPS<i
+                                    class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="#course2" class="dropdown-item">INTENSIVE</a>
+                                <a href="#course2" class="dropdown-item">INDUVIDUAL</a>
+                    
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <img style="width: 10rem;" src="img/IMG_1714.PNG" alt="">
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav py-0">
+                            <a href="#" class="nav-item nav-link active">Bosh sahifa</a>
+                            <a href="#about" class="nav-item nav-link">Biz haqimizda</a>
+                            <a href="#teachers" class="nav-item nav-link">Ustozlar</a>
+                            <a href="tel:+998 99 774 57 22" class="nav-item nav-link">Bog'lanish</a>
+                        </div>
+                        <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="#apply">Kursga ro'yxatdan o'tish</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 mb-5">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#header-carousel" data-slide-to="1"></li>
+                <li data-target="#header-carousel" data-slide-to="2"></li>
+                 <li data-target="#header-carousel" data-slide-to="3"></li>
+                  <li data-target="#header-carousel" data-slide-to="4"></li>
+                        <li data-target="#header-carousel" data-slide-to="5"></li>
+
+                        
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="img/ingliz_tili.JPG"
+                        style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-md-3">Level Up - Faqat Ingliz tili kurslari</h5>
+                            <h1 class="display-3 text-white mb-md-4">Ingliz tili 0-dan IELTS gacha</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="img/buyuk.PNG"
+                        style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-md-3"> Halqaro "CELTA" sertifikatli ustozlar </h5>
+                            <h1 class="display-3 text-white mb-md-4">Buyuk Britaniya o'qitish tizimi </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="img/white-room.jpg"
+                        style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="img/blue-room.jpg"
+                        style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="carousel-item" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="img/co-working.JPG"
+                        style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-md-3">Mutlaqo bepul</h5>
+                            <h1 class="display-3 text-white mb-md-4">CO-WORKING zone</h1>
+                        </div>
+                    </div>
+                </div>
+                 <div class="carousel-item" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="img/co-working2.jpg"
+                        style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div id="about" class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded mb-4 mb-lg-0" src="img/Дизайн_без_названия_2_PhotoRoom_png_PhotoRoom.png" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <div class="text-left mb-4">
+                        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Biz haqimizda</h5>
+                        <h3>Level Up'da bizning vazifamiz - o'quvchilar va talabalar uchun ingliz tilini o'rganishda innovatsion yechimlar taqdim etish, ularning til ko'nikmalarini oshirish va akademik muvaffaqiyatga erishishlariga ko'maklashishdir.</h1>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+<section class="utp-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Level Up Karshi tanlashingiz uchun 8 sabab</h5>
+            <h2 class="display-4 font-weight-bold">Bizning Afzalliklarimiz</h2>
+        </div>
+        <div class="utp-container">
+            <div class="utp-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Student's App + Reward System</h3>
+                <p>Talabalar uchun mukofot tizimi va mobil ilova orqali nazorat.</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-users"></i>
+                <h3>15 kishilik guruhlar</h3>
+                <p>Har bir guruhda maximum 15 nafar o‘quvchi, individual yondashuv.</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-home"></i>
+                <h3>Bepul Co-working Zone</h3>
+                <p>O‘quvchilar uchun qulay muhitda bepul coworking maydon.</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-book-open"></i>
+                <h3>Buyuk Britaniya ta’lim tizimi</h3>
+                <p>Darslar zamonaviy Britaniya ta’lim modeli asosida.</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-bullseye"></i>
+                <h3>Amaliy darslar</h3>
+                <p>Har bir darsda real hayotiy vaziyatlarga asoslangan mashg‘ulotlar.</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-headset"></i>
+                <h3>Free Support Tizimi</h3>
+                <p>O‘quvchilar uchun bepul yordam tizimi (online/offline).</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-check-circle"></i>
+                <h3>Academic Department</h3>
+                <p>O‘quv sifatini doimiy nazorat qiluvchi bo‘lim.</p>
+            </div>
+            <div class="utp-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Weekend Events</h3>
+                <p>Har hafta dam olish kunlari o‘tkaziladigan interaktiv tadbirlar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <style>
+/* Global yaxshilanishlar uchun */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #444; /* Matn rangini biroz quyuqroq qilish */
+    background-color: #f7f7f7; /* Umumiy fon rangini oq emas, och kulrang qilish */
+}
+
+/* UTP Section (Bizning Afzalliklarimiz) - Zamonaviy Grid */
+.utp-section {
+    text-align: center;
+    padding: 80px 0;
+    background: white; /* Bu qism oq fonda yorqin turadi */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.utp-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+}
+.utp-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.utp-card {
+    background: #fdfdfd;
+    border-radius: 12px; /* Yumaloq burchaklar */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Yumshoq soya */
+    padding: 30px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Silliq animatsiya */
+    border-left: 5px solid #ffc107; /* Toza chiziqcha qo'shish */
+}
+.utp-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(255, 193, 7, 0.25); /* Yorqinroq soya */
+    background-color: #fff8e8; /* Hoverda och sariq fon */
+}
+.utp-card i {
+    font-size: 38px;
+    color: #ffc107; /* Asosiy rang */
+    margin-bottom: 15px;
+    background: #ffc10720; /* Icon orqasida och fon */
+    padding: 10px;
+    border-radius: 50%;
+}
+.utp-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+}
+.utp-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Testimonial Section (Yangi Fikrlar qismi) */
+.testimonial-section {
+    background-color: #f7f7f7;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+.testimonial-card::before {
+    content: '\201C'; /* Katta qo'shtirnoq */
+    position: absolute;
+    top: -15px;
+    left: 5px;
+    font-size: 80px;
+    color: #ffc10750; /* Asosiy rangning ochroq tusi */
+    line-height: 1;
+    z-index: 1;
+    opacity: 0.6;
+}
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+.quote-text {
+    font-style: italic;
+    color: #333;
+    font-size: 1.05rem;
+    z-index: 2;
+    position: relative;
+}
+</style>
+<!-- Font Awesome iconlar uchun -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+  .quotes {
+    width: 80vw;
+    min-height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  
+  .quotes .box {
+    position: relative;
+    width: 25vw;
+    height: 50vh;
+    min-height: 680px;
+    background: #f2f2f2;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+  }
+  
+  .quotes .box::before {
+    content: '\201C';
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    font-size: 120px;
+    opacity: 0.2;
+
+    pointer-events: none;
+  }
+  
+  .quotes .box::after {
+    content: '\201D';
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    font-size: 120px;
+    opacity: 0.2;
+    background: transparent;
+    filter: invert(1);
+    pointer-events: none;
+  }
+  
+  .quotes .box p {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .quotes .box h2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 10%;
+    right: 10%;
+    font-size: 1.5rem;
+  }
+  
+  .quotes .box:hover {
+    color: black;
+    box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5);
+  }
+  
+  .quotes .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    pointer-events: none;
+    width: 100%;
+    height: 200%;
+    overflow: hidden;
+  }
+  
+  .quotes .box.box1:hover,
+  .quotes .box.box1:hover~.bg {
+ 
+    background: #e2a9e5;
+  background: -moz-linear-gradient(-45deg, #fac000 15%, #fac000 100%);
+  background: -webkit-linear-gradient(-45deg, #fac000 15%,#fac000 100%);
+  background: linear-gradient(135deg, #fac000 15%,#fac000 100%);
+ 
+  }
+  
+  .quotes .box.box2:hover,
+  .quotes .box.box2:hover~.bg {
+
+    background: #632c65;
+  background: -moz-linear-gradient(-45deg, #fac000 15%, #fac000 100%);
+  background: -webkit-linear-gradient(-45deg, #fbff01 15%,#fac000 100%);
+  background: linear-gradient(135deg, #fac000 15%,#fac000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#632c65', endColorstr='#56a5e2',GradientType=1 );
+  }
+  
+  .quotes .box.box3:hover,
+  .quotes .box.box3:hover~.bg {
+   
+    background: #4b384c;
+  background: -moz-linear-gradient(-45deg, #fac000 15%, #fac000 100%);
+  background: -webkit-linear-gradient(-45deg, #fac000 15%,#fac000 100%);
+  background: linear-gradient(135deg, #fac000 15%,#fac000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b384c', endColorstr='#da5de2',GradientType=1 );
+  }
+  @media screen and (max-width: 768px) {
+  .quotes {
+    width: 100vw;
+    min-height: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .quotes .box {
+    width: 100vw;
+    height: auto;
+    min-height: 200px;
+    padding: 10px; 
+    margin-bottom: 10px;
+    box-shadow: -5px 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .quotes .box::before,
+  .quotes .box::after {
+    font-size: 80px;
+  }
+
+  .quotes .box p {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  .quotes .box h2 {
+    font-size: 1.2rem;
+    bottom: 5%;
+    right: 5%;
+  }
+
+  .quotes .bg {
+    height: 150%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .quotes {
+    width: 105vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .quotes .box {
+    width: 45vw;
+    height: auto;
+    min-height: 250px;
+    padding: 20px;
+  }
+
+  .quotes .box::before,
+  .quotes .box::after {
+    font-size: 100px;
+  }
+
+  .quotes .box p {
+    font-size: 1.1rem;
+  }
+
+  .quotes .box h2 {
+    font-size: 1.3rem;
+  }
+
+  .quotes .bg {
+    height: 175%;
+  }
+}
+
+  </style>
+    <!-- Category Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-5">
+               
+                <h1>Kurslar</h1>
+            </div>
+         
+
+                <div style="margin-left: -2rem;" class="quotes">
+                    <div class="card">
+                      <div class="box box1">
+                   <h3 style="margin-left: 1.5rem;">GENERAL ENGLISH</h3> <p> Kurs 4 darajani (Beginnerdan Intermediategacha) qamrab oladi, har biri 3-4 oy davom etadi.
+
+                            Darslar haftasiga 3 marta 90 daqiqa davomida, Camridge University Press'ning FACE2FACE dasturidan foydalanib o'tkaziladi.
+                          
+                            Talabalarga bepul tarqatma materiallar beriladi
+                          
+                            Yakshanba kunlari tadbirlar o'tkaziladi, jumladan, Movie Day, Speaking Club, Debatlar va muvaffaqiyatli mehmonlar bilan seminarlar.
+                           O'tkazib yuborilgan darslar yoki qiyinchiliklar uchun yordamchi o'qituvchi yordam beradi </p>
+                      </div>
+                      <div class="bg"></div>
+                    </div>
+                    <div class="card">
+                      <div class="box box2">
+                       <h3 style="margin-left: 1.5rem;">IELTS</h3><p>IELTS formati haqida asosiy bilimlarni oling.
+
+                            IELTS testini samarali topshirish uchun strategiyalarni o'rganing.
+                          
+                            Haqiqiy IELTS imtihonini simulyatsiya qilish uchun sinov testlarida ishtirok eting.
+                          
+                            Har bir dars 90 daqiqa davom etadi, bu esa optimal o'quv mashg'ulotlari uchun mo'ljallangan.
+                          
+                            
+                          
+                            Har yakshanba kuni speaking klublari va boshqa qiziqarli, interaktiv tadbirlarda ishtirok eting</p>                     
+                      </div>
+                      <div class="bg"></div>
+                    </div>
+                    <div class="card">
+                      <div class="box box3">
+                        <h3 style="margin-left: 1.5rem;">INTENSIVE</h3><p>INTENSIVE darslar formati: <br>Har kunlik darslar. <br>Individual yondashuv
+                            Bepul tarqatma materiallar. <br>O'z vaqtida berib boriladigan Feedback lar <br>Bepul CO-WORKING zone <br>Bepul Mock test 
+                            <br>Bepul tadbir va traininglar <br>2 ta o'qituvchi bilan shug'ullanish
+                        </p>   
+                      </div>
+                      <div class="bg"></div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Category Start -->
+
+
+    <!-- Courses Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div id="course0" class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Kurslar</h5>
+                <h1>Haqida</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/1.png" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
+                            </div>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">Starter/Beginner</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>3-oy
+                                    </h6>
+                                    <h5 class="m-0">450.000 UZS</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/2.png" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
+                            </div>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">Elementary</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>3-oy
+                                    </h6>
+                                    <h5 class="m-0">450.000 UZS</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/3.png" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
+                            </div>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">Pre-Intermediate</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>3-oy
+                                    </h6>
+                                    <h5 class="m-0">450.000 UZS</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/4.png" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
+                            </div>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">Intermediate</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4-oy
+                                    </h6>
+                                    <h5 class="m-0">450.000 UZS</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="course1" class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/5.png" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
+                            </div>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">PRE-IELTS</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>2-oy
+                                    </h6>
+                                    <h5 class="m-0">500.000 UZS</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/6.png" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
+                            </div>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">IELTS-STANDARD</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4-oy
+                                    </h6>
+                                    <h5 class="m-0">600.000 UZS</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="course2" class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/7.png" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>240-min</small>
+                            </div>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">IELTS-INTENSIVE</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>2-oy
+                                    </h6>
+                                    <h5 class="m-0">700.000 UZS</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/8.png" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>16 O'quvchi</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
+                            </div>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">CEFR</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>3-oy
+                                    </h6>
+                                    <h5 class="m-0">500.000 UZS</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/9.png" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>2 O'quvchi</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>90-min</small>
+                            </div>
+                            <a class="h5" href="https://level-up-karshi.modme.uz/entry/lead?utm_source=5196&section=152721">INDIVIDUAL</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><small>Darajangizdan kelib chiqib</small>
+                                    </h6>
+                                    <h5 class="m-0">1.700.000 UZS</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+
+<style>
+  /* Responsive adjustment */
+  @media (max-width: 768px) {
+    .registration-wrapper {
+      min-height: auto; /* Kichik ekranlarda 100vh ni olib tashlaymiz */
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+</style>
+    <!-- Registration Start -->
+  <div class="container-fluid registration-wrapper" style="min-height: 100vh; display: flex; justify-content: center; align-items: center; background:#fff;">
+    <div class="container" style="max-width: 600px;">
+        <div class="row justify-content-center">
+            <div id="apply" class="col-12">
+                <div class="card border-0 shadow">
+                    <div class="card-header bg-light text-center p-4">
+                        <h1 class="m-0">Ro'yxatdan o'ting</h1>
+                    </div>
+                    <div class="card-body rounded-bottom bg-primary p-5">
+                        <form id="course-form">
+                            <div class="form-group mb-3">
+                                <input type="text" id="name" name="name" class="form-control border-0 p-4" placeholder="Ismingiz" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" id="surname" name="surname" class="form-control border-0 p-4" placeholder="Familiyangiz" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" id="phone_number" name="phone_number" class="form-control border-0 p-4" placeholder="Telefon raqamingiz" required />
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="text" id="course" name="course" class="form-control border-0 p-4" placeholder="Qaysi kursga yozilmoqchisiz" required />
+                            </div>
+                            <div>
+                                <button class="btn btn-dark btn-block border-0 py-3 w-100" type="submit">Kursga yozilish</button>
+                            </div>
+                            <div style="text-align: center; color: white; margin-top: 1rem;" id="response-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <!-- Registration End -->
+    <script>
+  // script.js
+document.getElementById('course-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Formani yuborishning oldini olish
+
+    const formData = {
+        name: document.getElementById('name').value,
+        surname: document.getElementById('surname').value,
+        phone_number: document.getElementById('phone_number').value,
+        course: document.getElementById('course').value,
+    };
+
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content'); // CSRF tokenini olish
+
+    fetch('https://levelupbackend.pythonanywhere.com/courses/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken, // CSRF tokenini qo'shish
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Xato: Ma\'lumotlar saqlanmadi.');
+        }
+    })
+    .then(data => {
+        document.getElementById('response-message').innerText = 'Muvaffaqiyatli ro`yxatdan o`tdingiz siz bilan tez orada aloqaga chiqamiz!';
+        document.getElementById('course-form').reset(); // Formani tozalash
+    })
+    .catch(error => {
+        document.getElementById('response-message').innerText = error.message;
+    });
+});
+
+      </script>
+
+    <!-- Team Start -->
+    <div id="teachers" class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-5">
+                <h1>Bizning ustozlar</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/munisa.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/parviz.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>    
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/istam.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>  
+                  <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/asadbek.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>  
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/azamat.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>  
+                   <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/ziyodbek.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>  
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/fotima.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/durdona.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>   
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/marjona.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>   
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/kamron-1.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>   
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/lola.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/mohinur.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>  
+      <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            <video class=" video-fluid" autoplay muted loop playsinline>
+                                <source src="video/ahmad.mp4" type="video/mp4">
+                              </video>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+  <!-- Blog Start -->
+  <div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-5">
+            <h1>O'quvchilarimiz natijalari</h1>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-btn" id="prevBtn">&#10094;</button>
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide"><img src="results/new/new4.jpg" alt="Image 1"></div>
+              <div class="carousel-slide"><img src="results/0.png" alt="Image 1"></div>
+              <div class="carousel-slide"><img src="results/01.png" alt="Image 2"></div>
+              <div class="carousel-slide"><img src="results/02.png" alt="Image 3"></div>
+              <div class="carousel-slide"><img src="results/04.png" alt="Image 4"></div>
+              <div class="carousel-slide"><img src="results/new/new2.jpg" alt="Image 5"></div>
+              <div class="carousel-slide"><img src="results/new/new3.jpg" alt="Image 6"></div>
+              <div class="carousel-slide"><img src="results/new/parviz.jpg" alt="Image 7"></div>
+              <div class="carousel-slide"><img src="results/new/celta.jpg" alt="Image 9"></div>
+              <div class="carousel-slide"><img src="results/new/charos.jpg" alt="Image 9"></div>
+              <div class="carousel-slide"><img src="results/new/fotima.jpg" alt="Image 10"></div>
+              <div class="carousel-slide"><img src="results/new/lola.jpg" alt="Image 11"></div>
+              <div class="carousel-slide"><img src="results/new/farangiz.jpg" alt="Image 12"></div>
+              <div class="carousel-slide"><img src="results/new/bilolbek.jpg" alt="Image 13"></div>
+              <div class="carousel-slide"><img src="results/new/azamat.jpg" alt="Image 14"></div>
+              <div class="carousel-slide"><img src="results/new/Image (2).jpg" alt="Image 15"></div>
+              <div class="carousel-slide"><img src="results/new/ziyodbek.jpg" alt="Image 38"></div>
+              <div class="carousel-slide"><img src="results/new/kamron.jpg" alt="Image 16"></div>
+              <div class="carousel-slide"><img src="results/new/image.jpg" alt="Image 17"></div>
+              <div class="carousel-slide"><img src="results/new/marjona.jpg" alt="Image 18"></div>
+              <div class="carousel-slide"><img src="results/new/murodbek.jpg" alt="Image 19"></div>
+              <div class="carousel-slide"><img src="results/new/shahrizoda.jpg" alt="Image 20"></div>
+              <div class="carousel-slide"><img src="results/new/shodiyona.jpg" alt="Image 21"></div>
+              <div class="carousel-slide"><img src="results/asilabonu.png" alt="Image 22"></div>
+              <div class="carousel-slide"><img src="results/musabek.png" alt="Image 23"></div>
+              <div class="carousel-slide"><img src="results/noila.png" alt="Image 24"></div>
+              <div class="carousel-slide"><img src="results/1.png" alt="Image 26"></div>
+              <div class="carousel-slide"><img src="results/2.jpg" alt="Image 27"></div>
+              <div class="carousel-slide"><img src="results/3.png" alt="Image 28"></div>
+              <div class="carousel-slide"><img src="results/4.png" alt="Image 29"></div>
+              <div class="carousel-slide"><img src="results/5.png" alt="Image 30"></div>
+              <div class="carousel-slide"><img src="results/7.png" alt="Image 31"></div>
+              <div class="carousel-slide"><img src="results/8.png" alt="Image 32"></div>
+              <div class="carousel-slide"><img src="results/9.png" alt="Image 33"></div>
+              <div class="carousel-slide"><img src="results/10.png" alt="Image 34"></div>
+              <div class="carousel-slide"><img src="results/11.png" alt="Image 35"></div>
+              <div class="carousel-slide"><img src="results/12.png" alt="Image 36"></div>
+              <div class="carousel-slide"><img src="results/13.png" alt="Image 37"></div>
+              <div class="carousel-slide"><img src="results/new/madina.jpg" alt="Image 38"></div>
+              <div class="carousel-slide"><img src="results/new/zaxro.jpg" alt="Image 39"></div>
+              <div class="carousel-slide"><img src="results/new/dildora.jpg" alt="Image 40"></div>
+              
+
+            </div>
+            <button class="carousel-btn" id="nextBtn">&#10095;</button>
+          </div>
+          
+    </div>
+</div>
+<!-- Blog End -->
+  
+      <script>
+        const track = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+      
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const slideCount = slides.length;
+      
+        function updateCarousel() {
+          const slideWidth = slides[0].offsetWidth;
+          track.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+        }
+      
+        nextBtn.addEventListener('click', () => {
+          if (slideIndex < slideCount - 1) {
+            slideIndex++;
+            updateCarousel();
+          }
+        });
+      
+        prevBtn.addEventListener('click', () => {
+          if (slideIndex > 0) {
+            slideIndex--;
+            updateCarousel();
+          }
+        });
+      
+        window.addEventListener('resize', updateCarousel);
+        // Auto slide every 3 seconds
+  setInterval(nextImage, 3000);
+      </script>
+  
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-7 col-md-12">
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        
+                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Biz bilan bog'lanish:</h5>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>Qarshi shahar, Eski gilam bozor</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+998 99 774 57 22</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light btn-square mr-2" href="t.me/level_upadmin"><i class="fab fa-telegram"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="https://www.facebook.com/profile.php?id=61555028379599&mibextid=LQQJ4d"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="https://youtube.com/@level_up_karshi?si=vZMgaa5bH4nhlz3G"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-square" href="https://instagram.com/level_up_karshi"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 mb-5">
+                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Bizning Maqsadimiz:</h5>
+                <p>Level Up'da bizning vazifamiz - o'quvchilar va talabalar uchun ingliz tilini o'rganishda innovatsion yechimlar taqdim etish, ularning til ko'nikmalarini oshirish va akademik muvaffaqiyatga erishishlariga ko'maklashishdir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
